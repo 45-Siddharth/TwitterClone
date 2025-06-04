@@ -1,0 +1,67 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "siddharth",
+  "password": "45_siddharth",
+  "name": "Siddharth",
+  "gender": "male"
+}
+
+###
+
+POST http://localhost:3000/login/
+Content-type: application/json
+
+{
+  "username":"siddharth",
+  "password":"45_siddharth"
+}
+
+###
+
+GET http://localhost:3000/user/tweets/feed/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNTYxMDM4fQ.Piu9H4P0DMxEmzmPFpCeK-1qNH_rUY0xjn6IPKKTPwc
+
+###
+
+GET http://localhost:3000/user/following/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+
+###
+
+GET http://localhost:3000/user/followers/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+
+###
+
+GET http://localhost:3000/tweets/1/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+
+###
+
+GET http://localhost:3000/tweets/1/likes/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+
+###
+
+GET http://localhost:3000/tweets/1/replies/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+
+###
+
+GET http://localhost:3000/user/tweets/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+
+###
+
+POST http://localhost:3000/user/tweets/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZGRoYXJ0aCIsImlhdCI6MTc0OTAyNTE5NX0.a1f093sOIxU4Nf-qVRKwumAV7Hy7K5taHsN63ohh530
+Content-type: application/json
+
+{
+   "tweet": "Hi Hello!!"
+}
+
+DELETE http://localhost:3000/tweets/4/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
