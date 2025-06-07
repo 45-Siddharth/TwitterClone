@@ -1,4 +1,4 @@
-### Register
+### Register User
 POST https://my-twitter-clone.vercel.app/api/register/
 Content-Type: application/json
 
@@ -11,7 +11,7 @@ Content-Type: application/json
 
 ###
 
-### Login
+### Login and Save JWT Token
 POST https://my-twitter-clone.vercel.app/api/login/
 Content-Type: application/json
 
@@ -20,61 +20,66 @@ Content-Type: application/json
   "password": "45_siddharth"
 }
 
+> {%
+// Save the token in a global variable
+client.global.set("token", response.body.token);
+%}
+
 ###
 
 ### Tweets Feed
 GET https://my-twitter-clone.vercel.app/api/user/tweets/feed/
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer {{token}}
 
 ###
 
 ### Following
 GET https://my-twitter-clone.vercel.app/api/user/following/
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer {{token}}
 
 ###
 
 ### Followers
 GET https://my-twitter-clone.vercel.app/api/user/followers/
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer {{token}}
 
 ###
 
 ### Tweet Details
 GET https://my-twitter-clone.vercel.app/api/tweets/1/
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer {{token}}
 
 ###
 
 ### Tweet Likes
 GET https://my-twitter-clone.vercel.app/api/tweets/1/likes/
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer {{token}}
 
 ###
 
 ### Tweet Replies
 GET https://my-twitter-clone.vercel.app/api/tweets/1/replies/
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer {{token}}
 
 ###
 
 ### My Tweets
 GET https://my-twitter-clone.vercel.app/api/user/tweets/
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer {{token}}
 
 ###
 
 ### Post Tweet
 POST https://my-twitter-clone.vercel.app/api/user/tweets/
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-   "tweet": "Hi Hello!!"
+  "tweet": "Hi Hello!!"
 }
 
 ###
 
 ### Delete Tweet
 DELETE https://my-twitter-clone.vercel.app/api/tweets/4/
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer {{token}}
