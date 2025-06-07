@@ -1,4 +1,5 @@
-POST http://localhost:3000/register/
+### Register
+POST https://my-twitter-clone.vercel.app/api/register/
 Content-Type: application/json
 
 {
@@ -10,58 +11,70 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/login/
-Content-type: application/json
+### Login
+POST https://my-twitter-clone.vercel.app/api/login/
+Content-Type: application/json
 
 {
-  "username":"siddharth",
-  "password":"45_siddharth"
+  "username": "siddharth",
+  "password": "45_siddharth"
 }
 
 ###
 
-GET http://localhost:3000/user/tweets/feed/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNTYxMDM4fQ.Piu9H4P0DMxEmzmPFpCeK-1qNH_rUY0xjn6IPKKTPwc
+### Tweets Feed
+GET https://my-twitter-clone.vercel.app/api/user/tweets/feed/
+Authorization: Bearer <your-jwt-token>
 
 ###
 
-GET http://localhost:3000/user/following/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+### Following
+GET https://my-twitter-clone.vercel.app/api/user/following/
+Authorization: Bearer <your-jwt-token>
 
 ###
 
-GET http://localhost:3000/user/followers/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+### Followers
+GET https://my-twitter-clone.vercel.app/api/user/followers/
+Authorization: Bearer <your-jwt-token>
 
 ###
 
-GET http://localhost:3000/tweets/1/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+### Tweet Details
+GET https://my-twitter-clone.vercel.app/api/tweets/1/
+Authorization: Bearer <your-jwt-token>
 
 ###
 
-GET http://localhost:3000/tweets/1/likes/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+### Tweet Likes
+GET https://my-twitter-clone.vercel.app/api/tweets/1/likes/
+Authorization: Bearer <your-jwt-token>
 
 ###
 
-GET http://localhost:3000/tweets/1/replies/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+### Tweet Replies
+GET https://my-twitter-clone.vercel.app/api/tweets/1/replies/
+Authorization: Bearer <your-jwt-token>
 
 ###
 
-GET http://localhost:3000/user/tweets/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+### My Tweets
+GET https://my-twitter-clone.vercel.app/api/user/tweets/
+Authorization: Bearer <your-jwt-token>
 
 ###
 
-POST http://localhost:3000/user/tweets/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpZGRoYXJ0aCIsImlhdCI6MTc0OTAyNTE5NX0.a1f093sOIxU4Nf-qVRKwumAV7Hy7K5taHsN63ohh530
-Content-type: application/json
+### Post Tweet
+POST https://my-twitter-clone.vercel.app/api/user/tweets/
+Authorization: Bearer <your-jwt-token>
+Content-Type: application/json
 
 {
    "tweet": "Hi Hello!!"
 }
 
-DELETE http://localhost:3000/tweets/4/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNzQwNDgyNjgwfQ.Vm7JfuQxkD0SxOM9d-Z0a0zWy3DHJ0VniNlREoX5DlQ
+###
+
+### Delete Tweet
+DELETE https://my-twitter-clone.vercel.app/api/tweets/4/
+Authorization: Bearer <your-jwt-token>
