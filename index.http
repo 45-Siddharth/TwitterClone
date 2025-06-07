@@ -1,5 +1,5 @@
 ### Register User
-POST https://my-twitter-clone.vercel.app/api/register/
+POST https://twitter-clone-gules-ten.vercel.app/api/register/
 Content-Type: application/json
 
 {
@@ -12,7 +12,7 @@ Content-Type: application/json
 ###
 
 ### Login and Save JWT Token
-POST https://my-twitter-clone.vercel.app/api/login/
+POST https://twitter-clone-gules-ten.vercel.app/api/login/
 Content-Type: application/json
 
 {
@@ -21,56 +21,56 @@ Content-Type: application/json
 }
 
 > {%
-// Save the token in a global variable
+// Save the token from response
 client.global.set("token", response.body.token);
 %}
 
 ###
 
 ### Tweets Feed
-GET https://my-twitter-clone.vercel.app/api/user/tweets/feed/
+GET https://twitter-clone-gules-ten.vercel.app/api/user/tweets/feed/
 Authorization: Bearer {{token}}
 
 ###
 
 ### Following
-GET https://my-twitter-clone.vercel.app/api/user/following/
+GET https://twitter-clone-gules-ten.vercel.app/api/user/following/
 Authorization: Bearer {{token}}
 
 ###
 
 ### Followers
-GET https://my-twitter-clone.vercel.app/api/user/followers/
+GET https://twitter-clone-gules-ten.vercel.app/api/user/followers/
 Authorization: Bearer {{token}}
 
 ###
 
 ### Tweet Details
-GET https://my-twitter-clone.vercel.app/api/tweets/1/
+GET https://twitter-clone-gules-ten.vercel.app/api/tweets/1/
 Authorization: Bearer {{token}}
 
 ###
 
 ### Tweet Likes
-GET https://my-twitter-clone.vercel.app/api/tweets/1/likes/
+GET https://twitter-clone-gules-ten.vercel.app/api/tweets/1/likes/
 Authorization: Bearer {{token}}
 
 ###
 
 ### Tweet Replies
-GET https://my-twitter-clone.vercel.app/api/tweets/1/replies/
+GET https://twitter-clone-gules-ten.vercel.app/api/tweets/1/replies/
 Authorization: Bearer {{token}}
 
 ###
 
 ### My Tweets
-GET https://my-twitter-clone.vercel.app/api/user/tweets/
+GET https://twitter-clone-gules-ten.vercel.app/api/user/tweets/
 Authorization: Bearer {{token}}
 
 ###
 
 ### Post Tweet
-POST https://my-twitter-clone.vercel.app/api/user/tweets/
+POST https://twitter-clone-gules-ten.vercel.app/api/user/tweets/
 Authorization: Bearer {{token}}
 Content-Type: application/json
 
@@ -81,5 +81,5 @@ Content-Type: application/json
 ###
 
 ### Delete Tweet
-DELETE https://my-twitter-clone.vercel.app/api/tweets/4/
+DELETE https://twitter-clone-gules-ten.vercel.app/api/tweets/4/
 Authorization: Bearer {{token}}
