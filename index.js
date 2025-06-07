@@ -8,7 +8,7 @@ const sqlite3 = require('sqlite3')
 const path = require('path')
 const fs = require('fs')
 const dbPath = path.join(process.cwd(), 'twitterClone.db')
-
+const serverless = require('serverless-http')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
@@ -347,3 +347,4 @@ app.delete(
   },
 )
 module.exports = app
+module.exports.handler = serverless(app)
